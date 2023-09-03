@@ -10,7 +10,7 @@ function TareaFormulario(props) {
         setInput(e.target.value);
         console.log(e.target.value);
         
-    }
+    };
     const manejarEnvio = e => {
 
         e.preventDefault();
@@ -20,11 +20,12 @@ function TareaFormulario(props) {
             texto:input,
             completada:false
            
-        }
+        };
         props.onSubmit(tareaNueva);
-    }
+    };
     return (
-    <form className='tarea-formulario' onSubmit= {manejarCambio}>
+    <form className='tarea-formulario'
+     onSubmit= {manejarEnvio}>
         <input className='tarea-input'
         type='text'
         placeholder='Escribe una Tarea'
